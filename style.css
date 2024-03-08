@@ -1,0 +1,115 @@
+:root {
+  --bg: #e1e1db;
+  --title: #737480;
+  --light-title: #262625;
+  --txt: #4e5064;
+  --link-txt: #925757;
+  --link-bg: #a8a8a5;
+  --theme-icon: url(./public/moon.png);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  --title: #2d3134;
+  --bg: #131516;
+  --txt: #98a3ad;
+  --link-txt: #925757;
+  --theme-icon: url(./public/sun.png);
+}
+
+.dark-mode #h-menu {
+  filter: invert(1)
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--txt);
+  width: 80%;
+  margin: auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--link-txt);
+}
+
+a:visited {
+  color: var(--link-txt);
+}
+
+ul {
+  list-style-type: none;
+}
+
+#theme-icon {
+  content: var(--theme-icon);
+  width: 30px;
+}
+
+#h-menu, #mobile-nav {
+  display: none;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (max-width: 600px) {
+
+  body {
+    width: 100%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #nav-buttons {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+  }
+
+  #h-menu {
+    display: block;
+    order: 1;
+    margin-left: 10px;
+  }
+
+  #mobile-nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 100%;
+    transition: 0.5s;
+    font-size: 2.5rem;
+    overflow-x: hidden;
+    background-color: var(--bg);
+  }
+
+  #mobile-nav span {
+    order: 2;
+    font-weight: 900;
+    border-radius: 50%;
+  }
+
+  #menu {
+    font-size: 2rem;
+  }
+
+}
