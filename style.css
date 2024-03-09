@@ -6,6 +6,7 @@
   --link-txt: #925757;
   --link-bg: #c9ced6;
   --theme-icon: url(./public/moon.png);
+  --close-icon: black;
 }
 
 * {
@@ -20,6 +21,7 @@
   --link-txt: #925757;
   --link-bg: #2e3440;
   --theme-icon: url(./public/sun.png);
+  --close-icon: white;
 }
 
 .dark-mode #h-menu {
@@ -112,6 +114,10 @@ ul li {
   background-color: var(--link-bg);
 }
 
+#page-title {
+  transition: 0.5s;
+}
+
 @media (max-width: 600px) {
 
   body {
@@ -159,6 +165,9 @@ ul li {
     border-radius: 50%;
   }
 
+  #close-nav {
+    color: var(--close-icon);
+  }
   #menu {
     font-size: 2rem;
     width: 80%;
