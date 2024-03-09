@@ -49,18 +49,14 @@ const createNavBar = (parentDiv) => {
   parentDiv.appendChild(ulElement);
 }
 
-const displayCurrentPage = () => {
-  const currentPath = window.location.pathname.substring(1).toLowerCase();
-  console.log(currentPath);
+const displayCurrentPageInNavBar = () => {
+  let currentPath = window.location.pathname.substring(1).toLowerCase();
+  if (currentPath === '') currentPath = "home";
 
   const linkElements = document.querySelectorAll(`.${currentPath}`);
-  if (linkElements) {
-    linkElements.forEach(e => e.classList.add('current-page'));
-  } else {
-    console.log("Current element not found");
-  }
+  linkElements.forEach(e => e.classList.add('current-page'));
 }
 
 createNavBar(mobileNavMenu);
 createNavBar(mainNav);
-displayCurrentPage();
+displayCurrentPageInNavBar();
