@@ -37,7 +37,8 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-a {
+.page-link {
+  cursor: pointer;
   color: var(--link-txt);
   text-decoration: none;
 }

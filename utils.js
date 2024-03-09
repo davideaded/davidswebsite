@@ -1,3 +1,5 @@
+let currentPage = "home";
+
 const toggleDarkMode = () => {
   document.body.classList.toggle("dark-mode");
 }
@@ -17,50 +19,67 @@ const changeTheme = () => {
   })
 }
 
+const setCurrentPage = (page) => {
+  currentPage = page;
+}
+
+const createNavItem = (page, onClickHandler) => {
+  const liElement = document.createElement("li");
+
+  liElement.classList.add(page.toLowerCase(), "page-link");
+  liElement.textContent = page;
+  liElement.addEventListener("click", onClickHandler);
+
+  return liElement;
+}
+
 const createNavBar = (parentDiv, pages) => {
   const ulElement = document.createElement("ul");
 
+  const onItemClick = (page) => {
+    setCurrentPage(page.toLowerCase());
+    displayCurrentPage();
+    hideMobileNav();
+  };
+
   pages.forEach(page => {
-    const liElement = document.createElement("li");
-    const aElement = document.createElement("a");
-
-    liElement.classList = page.toLowerCase();
-
-    aElement.href = page.toLowerCase();
-    aElement.textContent = page;
-
-    liElement.appendChild(aElement);
+    const liElement = createNavItem(page, () => onItemClick(page));
     ulElement.appendChild(liElement);
   });
 
   parentDiv.appendChild(ulElement);
 }
 
-const displayMobileNav = (mobileNavElement) => {
-  document.getElementById("h-menu").addEventListener("click", () => {
-   mobileNavElement.style.width = "100%";
-   mobileNavElement.style.left = "0";
 
-    const closeNav = document.getElementById("close-nav");
-    closeNav.addEventListener("click", () => {
-     mobileNavElement.style.width = "0";
-     mobileNavElement.style.left = "100%";
-    })
-  })
+const hideMobileNav = () => {
+  const mobileNav = document.getElementById("mobile-nav");
+  mobileNav.style.width = "0";
+  mobileNav.style.left = "100%";
 }
 
-const setPageTitle = (currentPage) => {
-  const pageTitle = currentPage === "home" ? "David's Website" : currentPage.charAt(0).toUpperCase() + currentPage.slice(1);
-  document.getElementById("page-title").innerText = pageTitle;
+const displayMobileNav = () => {
+  const mobileNavElement = document.getElementById("mobile-nav");
+
+  document.getElementById("h-menu").addEventListener("click", () => {
+    mobileNavElement.style.width = "100%";
+    mobileNavElement.style.left = "0";
+  })
+
+  document.getElementById("close-nav")
+    .addEventListener("click", () => hideMobileNav(mobileNavElement))
+}
+
+const setPageTitle = () => {
+  const newPageTitle = currentPage === "home" ? "David's Website" : currentPage;
+  document.getElementById("page-title").innerText = newPageTitle.charAt(0).toUpperCase() + newPageTitle.slice(1);
 }
 
 const displayCurrentPage = () => {
-  let currentPath = window.location.pathname.substring(1).toLowerCase();
-  if (currentPath === '') currentPath = "home";
-  setPageTitle(currentPath);
+  setPageTitle();
+  document.querySelectorAll(".current-page").forEach(e => e.classList.remove("current-page"));
 
-  const linkElements = document.querySelectorAll(`.${currentPath}`);
-  linkElements.forEach(e => e.classList.add('current-page'));
+  document.querySelectorAll(`.${currentPage}`)
+    .forEach(e => e.classList.add('current-page'));
 }
 
 
