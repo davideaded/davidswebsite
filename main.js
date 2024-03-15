@@ -1,4 +1,4 @@
-import { changeTheme, createNavBar, displayMobileNav, displayCurrentPage } from "./utils";
+import { changeTheme, createNavBar, displayMobileNav, indicateCurrentPage, changeMainContent } from "./utils";
 
 const pages = ["Home", "About", "Projects"];
 const mainNav = document.getElementById("main-nav");
@@ -8,4 +8,5 @@ changeTheme();
 createNavBar(mobileNavMenu, pages);
 createNavBar(mainNav, pages);
 displayMobileNav();
-displayCurrentPage();
+indicateCurrentPage();
+changeMainContent();
