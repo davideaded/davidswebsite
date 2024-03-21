@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Shitty Tic Tac Toe",
+    "image": "/tictactoe.png",
+    "description": "Simple tic tac toe game",
+    "tools": "JavaScript",
+    "links": [
+      "https://github.com/davideaded/shitty-tic-tac-toe",
+      "https://davideaded.github.io/shitty-tic-tac-toe/"
+    ]
+  },
+  {
+    "name": "Where is Waldo",
+    "image": "/waldo.png",
+    "description": "A where is waldo game based on pop culture characters",
+    "tools": "React, Ruby on Rails",
+    "links": [
+      "https://github.com/davideaded/where-is-waldo",
+      "https://main--cerulean-bavarois-35efc7.netlify.app/"
+    ]
+  },
+  {
+    "name": "HubStore",
+    "image": "/hubstore.png",
+    "description": "A fictitious store based on the Fallout series",
+    "tools": "React",
+    "links": [
+      "https://github.com/davideaded/the-hub-store/",
+      "https://main--sparkly-taffy-e9b7c6.netlify.app/"
+    ]
+  },
+  {
+    "name": "Pokemon Memory Card",
+    "image": "/pokememorycard.png",
+    "description": "A simple and fun game using the Pokemon API",
+    "tools": "React",
+    "links": [
+      "https://github.com/davideaded/pokemon-memory-card",
+      "https://jade-arithmetic-79e557.netlify.app/"
+    ]
+  }
+]

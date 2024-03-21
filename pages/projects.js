@@ -1,41 +1,77 @@
-const createCardImage = (imgSrc) => {
-  const image = document.createElement("img");
-  image.src = imgSrc;
+import projectsData from "../data/projects.json";
 
-  // const imageContainer = document.createElement("div");
-  // imageContainer.classList.add("card-img-container");h
+const expandImage = (imageElement) => {
+  const expandedContainer = document.createElement('div');
+  expandedContainer.classList.add('expanded');
+  expandedContainer.style.backgroundImage = `url(${imageElement.src})`;
+  document.body.appendChild(expandedContainer);
 
-  return image;
+  expandedContainer.addEventListener('click', () => {
+    expandedContainer.remove();
+  });
 }
 
-const createCard = (title, description, tools) => {
-  const cardElement = document.createElement("div");
+const createCard = (name, image, description, tools, links) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
 
-  const cardImage = createCardImage("/pokememorycard.png");
+  const cardInfo = document.createElement("div");
+  cardInfo.classList.add("card-info");
 
-  const cardInfoElement = document.createElement("div");
-  cardInfoElement.classList.add("card-info");
+  const cardTitle = document.createElement("h3");
+  cardTitle.innerText = name;
 
-  const titleElement = document.createElement("h3");
-  titleElement.textContent = title;
+  const cardImage = document.createElement("img");
+  cardImage.src = image; 
+  cardImage.classList.add("expandable-image");
+  cardImage.addEventListener("click", () => expandImage(cardImage));
 
-  const descriptionElement = document.createElement("p");
-  descriptionElement.textContent = description;
+  const cardDescription = document.createElement("p");
+  cardDescription.innerText = description;
 
-  const toolsElement = document.createElement("h3");
-  toolsElement.textContent = tools;
+  const cardTools = document.createElement("p");
+  cardTools.innerHTML = `<b>Tools:</b> ${tools}`;
 
-  cardElement.classList.add("card");
-  cardElement.appendChild(cardImage);
-  cardInfoElement.appendChild(titleElement);
-  cardInfoElement.appendChild(descriptionElement);
-  cardInfoElement.appendChild(toolsElement);
-  cardElement.appendChild(cardInfoElement);
+  const githubNavLink = document.createElement("a");
+  githubNavLink.href = links[0];
+  githubNavLink.target = "_blank";
+  githubNavLink.classList.add("github-nav");
+  githubNavLink.innerHTML = "Source Code<br>";
 
-  return cardElement;
+  const liveLink = document.createElement("a");
+  liveLink.href = links[1];
+  liveLink.target = "_blank";
+  liveLink.classList.add("live-nav");
+  liveLink.innerText = "Check Live"
+
+  cardInfo.append(cardTitle, cardDescription, cardTools, githubNavLink, liveLink);
+  card.append(cardImage, cardInfo);
+  return card;
 }
 
-export default function loadProjects() {
-  return document.createElement("div")
-    .appendChild(createCard("Poke Memory Card", "Simple fun game!", "react"));
+const handleData = () => {
+  const cards = [];
+
+  projectsData.forEach(p => {
+    const { name, image, description, tools, links } = p;
+    let newCard = createCard(
+      name,
+      image,
+      description,
+      tools,
+      links
+    )
+
+    cards.push(newCard);
+  })
+
+  return cards;
+}
+
+export default function LoadProjects() {
+  const cardsContainer = document.createElement("div");
+  cardsContainer.classList.add("cards-container");
+
+  cardsContainer.append(...handleData());
+  return cardsContainer;
 }
