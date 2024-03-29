@@ -52,8 +52,7 @@ const createCard = (name, image, description, tools, links) => {
 const handleData = () => {
   const cards = [];
 
-  projectsData.forEach(p => {
-    const { name, image, description, tools, links } = p;
+  projectsData.forEach(({ name, image, description, tools, links }) => {
     let newCard = createCard(
       name,
       image,

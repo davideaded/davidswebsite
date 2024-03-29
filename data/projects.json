@@ -2,7 +2,7 @@
   {
     "name": "Shitty Tic Tac Toe",
     "image": "/tictactoe.png",
-    "description": "Simple tic tac toe game",
+    "description": "Simple tic tac toe game built to explore IIFE and factory function concepts.",
     "tools": "JavaScript",
     "links": [
       "https://github.com/davideaded/shitty-tic-tac-toe",
@@ -12,7 +12,7 @@
   {
     "name": "Where is Waldo",
     "image": "/waldo.png",
-    "description": "A where is waldo game based on pop culture characters",
+    "description": "A where is waldo game based on pop culture characters. Implemented with React and Rails to exercise the communication between front and back-end.",
     "tools": "React, Ruby on Rails",
     "links": [
       "https://github.com/davideaded/where-is-waldo",
@@ -22,7 +22,7 @@
   {
     "name": "HubStore",
     "image": "/hubstore.png",
-    "description": "A fictitious store based on the Fallout series",
+    "description": "A fictitious store based on the Fallout series. My second react project, experimenting with routes and interaction between components.",
     "tools": "React",
     "links": [
       "https://github.com/davideaded/the-hub-store/",
@@ -32,7 +32,7 @@
   {
     "name": "Pokemon Memory Card",
     "image": "/pokememorycard.png",
-    "description": "A simple and fun game using the Pokemon API",
+    "description": "A simple and fun game using the Pokemon API. My first react project.",
     "tools": "React",
     "links": [
       "https://github.com/davideaded/pokemon-memory-card",

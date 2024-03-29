@@ -2,8 +2,6 @@ import loadAbout from "./pages/about";
 import loadHome from "./pages/home";
 import loadProjects from "./pages/projects";
 
-let currentPage = "home";
-
 const toggleDarkMode = () => {
   document.body.classList.toggle("dark-mode");
 }
@@ -23,8 +21,16 @@ const changeTheme = () => {
   })
 }
 
+const pageSettings = (() => {
+  let currentPage = "home";
+  const setCurrentPage = newPage => currentPage = newPage;
+  const getCurrentPage = () => currentPage;
+
+  return { setCurrentPage, getCurrentPage }
+})();
+
 const setPageTitle = () => {
-  const newPageTitle = currentPage === "home" ? "David's Website" : currentPage;
+  const newPageTitle = pageSettings.getCurrentPage() === "home" ? "David's Website" : pageSettings.getCurrentPage();
   document.getElementById("page-title").innerText = newPageTitle.charAt(0).toUpperCase() + newPageTitle.slice(1);
 }
 
@@ -32,7 +38,7 @@ const indicateCurrentPage = () => {
   setPageTitle();
 
   document.querySelectorAll(".current-page").forEach(e => e.classList.remove("current-page"));
-  document.querySelectorAll(`.${currentPage}`).forEach(e => e.classList.add('current-page'));
+  document.querySelectorAll(`.${pageSettings.getCurrentPage()}`).forEach(e => e.classList.add('current-page'));
 }
 
 const changeMainContent = () => {
@@ -40,7 +46,7 @@ const changeMainContent = () => {
   const mainContentDiv = document.getElementById("main-content");
   mainContentDiv.classList.add("hidden");
 
-  switch (currentPage) {
+  switch (pageSettings.getCurrentPage()) {
     case "about":
       content = loadAbout();
       break;
@@ -57,10 +63,7 @@ const changeMainContent = () => {
     mainContentDiv.classList.remove("hidden");
   }, 300);
 }
-
-const setCurrentPage = (page) => {
-  currentPage = page;
-}
+// page
 
 const hideMobileNav = () => {
   const mobileNav = document.getElementById("mobile-nav");
@@ -90,12 +93,11 @@ const createNavItem = (page, onClickHandler) => {
   return liElement;
 }
 
-
 const createNavBar = (parentDiv, pages) => {
   const ulElement = document.createElement("ul");
 
   const onItemClick = (page) => {
-    setCurrentPage(page.toLowerCase());
+    pageSettings.setCurrentPage(page.toLowerCase());
     indicateCurrentPage();
     hideMobileNav();
     changeMainContent();
