@@ -3,7 +3,7 @@ import projectsData from "../data/projects.json";
 const expandImage = (imageElement) => {
   const expandedContainer = document.createElement('div');
   expandedContainer.classList.add('expanded');
-  expandedContainer.style.backgroundImage = `url(${imageElement.src})`;
+  expandedContainer.style.backgroundImage = `url(../${imageElement.src})`;
   document.body.appendChild(expandedContainer);
 
   expandedContainer.addEventListener('click', () => {

@@ -7,7 +7,7 @@
   --txt: #4e5064;
   --link-txt: #925757;
   --link-bg: #c9ced6;
-  --theme-icon: url(./moon.png);
+  --theme-icon: url(../moon.png);
   --close-icon: black;
 }
 
@@ -23,7 +23,7 @@
   --txt: #98a3ad;
   --link-txt: #925757;
   --link-bg: #2e3440;
-  --theme-icon: url(./sun.png);
+  --theme-icon: url(../sun.png);
   --close-icon: white;
 }
 
