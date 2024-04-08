@@ -22,7 +22,7 @@ const createCard = (name, image, description, tools, links) => {
   cardTitle.innerText = name;
 
   const cardImage = document.createElement("img");
-  cardImage.src = "davidswebsite/" + image; 
+  cardImage.src = "davidswebsite" + image; 
   cardImage.classList.add("expandable-image");
   cardImage.addEventListener("click", () => expandImage(cardImage));
 
