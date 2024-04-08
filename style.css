@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
   --bg: #e1e1db;
@@ -14,8 +14,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto Slab", serif;
-}
+  font-family: "VT323";
+} 
 
 .dark-mode {
   --title: #2d3134;
@@ -32,7 +32,6 @@
 }
 
 body {
-  font-family: 'dosis';
   background-color: var(--bg);
   color: var(--txt);
   width: 80%;
@@ -109,7 +108,7 @@ ul li {
 }
 
 #main-content {
-  padding: 2rem;
+  padding: 2rem 4rem;
   font-size: 25px;
   text-align: justify;
   transition: opacity 0.4s ease-in-out;
@@ -237,6 +236,10 @@ ul li {
 
   #main-nav {
     display: none;
+  }
+
+  #main-content {
+    padding: 2rem;
   }
 
   .card {

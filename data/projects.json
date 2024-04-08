@@ -12,7 +12,7 @@
   {
     "name": "Where is Waldo",
     "image": "/waldo.png",
-    "description": "A where is waldo game based on pop culture characters. Implemented with React and Rails to exercise the communication between front and back-end.",
+    "description": "A where is waldo game based on pop culture characters. Implemented with React and Rails to exercise the communication between front and back-end. Unfortunately my free back-end host went down.",
     "tools": "React, Ruby on Rails",
     "links": [
       "https://github.com/davideaded/where-is-waldo",
