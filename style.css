@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
+/* :root {
   --bg: #e1e1db;
   --title: #737480;
   --light-title: #262625;
   --txt: #4e5064;
   --link-txt: #925757;
+  --link-bg: #c9ced6;
+  --theme-icon: url(../moon.png);
+  --close-icon: black;
+} */
+
+:root {
+  --bg: #e6e6bd;
+  --title: #737480;
+  --light-title: #262625;
+  --txt: #3f4152;
+  --link-txt: #963d3d;
   --link-bg: #c9ced6;
   --theme-icon: url(../moon.png);
   --close-icon: black;
