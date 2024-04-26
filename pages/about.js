@@ -14,7 +14,7 @@ export default function loadAbout() {
   `
     ;
   div.id = "about-page";
-  image.src = "davidswebsite/public/oldpc.gif";
+  image.src = "./oldpc.gif";
   image.alt = "Anime old computer gif";
 
   div.append(paragraph, image);

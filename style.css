@@ -14,7 +14,7 @@
 
 :root {
   --bg: #e6e6bd;
-  --title: #737480;
+  --title: #44454e;
   --light-title: #262625;
   --txt: #3f4152;
   --link-txt: #963d3d;
@@ -34,12 +34,22 @@ h1 {
   font-style: normal;
 }
 
-.dark-mode {
+/* .dark-mode {
   --title: #2d3134;
   --bg: #131516;
   --txt: #98a3ad;
   --link-txt: #925757;
   --link-bg: #2e3440;
+  --theme-icon: url(../sun.png);
+  --close-icon: white;
+} */
+
+.dark-mode {
+  --title: #2da52d;
+  --bg: #000000;
+  --txt: #8de982;
+  --link-txt: #46db9d;
+  --link-bg: #0e2929;
   --theme-icon: url(../sun.png);
   --close-icon: white;
 }
@@ -92,6 +102,10 @@ header {
   justify-content: space-between;
   font-size: 2rem;
   margin-top: 1.5rem;
+}
+
+header > h1 {
+  color: var(--title);
 }
 
 #nav-buttons {
