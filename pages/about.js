@@ -1,5 +1,7 @@
 export default function loadAbout() {
+  const div = document.createElement("div");
   const paragraph = document.createElement("p");
+  const image = document.createElement("img");
   paragraph.innerHTML = `
     I was adrift, lacking direction and purpose, until a developer friend introduced me to the programming world.
     Descending that spiral, I found myself
@@ -11,6 +13,10 @@ export default function loadAbout() {
     allowing me to truly grasp the concepts by applying them in real projects.
   `
     ;
+  div.id = "about-page";
+  image.src = "davidswebsite/public/oldpc.gif";
+  image.alt = "Anime old computer gif";
 
-  return paragraph;
+  div.append(paragraph, image);
+  return div;
 }
