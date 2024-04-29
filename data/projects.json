@@ -1,7 +1,7 @@
 [
   {
     "name": "Shitty Tic Tac Toe",
-    "image": "/tictactoe.png",
+    "image": "/toe.png",
     "description": "Simple tic tac toe game built to explore IIFE and factory function concepts.",
     "tools": "JavaScript",
     "links": [
@@ -11,7 +11,7 @@
   },
   {
     "name": "Where is Waldo",
-    "image": "/waldo.png",
+    "image": "/wwaldo.png",
     "description": "A where is waldo game based on pop culture characters. Implemented with React and Rails to exercise the communication between front and back-end. Unfortunately my free back-end host went down.",
     "tools": "React, Ruby on Rails",
     "links": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "HubStore",
-    "image": "/hubstore.png",
+    "image": "/fout.png",
     "description": "A fictitious store based on the Fallout series. My second react project, experimenting with routes and interaction between components.",
     "tools": "React",
     "links": [
@@ -31,7 +31,7 @@
   },
   {
     "name": "Pokemon Memory Card",
-    "image": "/pokememorycard.png",
+    "image": "/poke.png",
     "description": "A simple and fun game using the Pokemon API. My first react project.",
     "tools": "React",
     "links": [
