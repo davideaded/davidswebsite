@@ -19,7 +19,8 @@
   --txt: #3f4152;
   --link-txt: #963d3d;
   --link-bg: #c9ced6;
-  --btn: #aeb5c2;
+  --btn: #e6e6bd;
+  --btn-border: #000000;
   --btn-txt: #721818;
   --theme-icon: url(../moon.png);
   --close-icon: black;
@@ -53,6 +54,7 @@ h1 {
   --link-txt: #3bca47;
   --link-bg: #0e2929;
   --btn-txt: #0f0e0e;
+  --btn-border: #b9c9b7;
   --theme-icon: url(../sun.png);
   --close-icon: white;
   --btn: #2da52d;
@@ -257,7 +259,7 @@ ul li {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  border: var(--btn) 3px solid;
+  border: var(--btn-border) 3px solid;
   background-color: var(--btn);
   color: var(--btn-txt);
   width: 45%;
