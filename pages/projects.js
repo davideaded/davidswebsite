@@ -32,19 +32,31 @@ const createCard = (name, image, description, tools, links) => {
   const cardTools = document.createElement("p");
   cardTools.innerHTML = `<b>Tools:</b> ${tools}`;
 
+  const linksDiv = document.createElement("div");
+  linksDiv.classList.add("project-links-div")
+
+  const githubImg = document.createElement("img");
+  githubImg.src = "./github-mark.svg";
+
+  const demoImg = document.createElement("img");
+  demoImg.src = "./demo.svg";
+
   const githubNavLink = document.createElement("a");
   githubNavLink.href = links[0];
   githubNavLink.target = "_blank";
   githubNavLink.classList.add("github-nav");
   githubNavLink.innerHTML = "Source Code<br>";
+  githubNavLink.append(githubImg);
 
   const liveLink = document.createElement("a");
   liveLink.href = links[1];
   liveLink.target = "_blank";
   liveLink.classList.add("live-nav");
-  liveLink.innerText = "Check Live"
+  liveLink.innerText = "Demo"
+  liveLink.append(demoImg);
 
-  cardInfo.append(cardTitle, cardDescription, cardTools, githubNavLink, liveLink);
+  linksDiv.append(githubNavLink, liveLink);
+  cardInfo.append(cardTitle, cardDescription, cardTools, linksDiv);
   card.append(cardImage, cardInfo);
   return card;
 }
