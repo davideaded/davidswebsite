@@ -1,12 +1,5 @@
 (function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))r(n);new MutationObserver(n=>{for(const o of n)if(o.type==="childList")for(const c of o.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&r(c)}).observe(document,{childList:!0,subtree:!0});function a(n){const o={};return n.integrity&&(o.integrity=n.integrity),n.referrerPolicy&&(o.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?o.credentials="include":n.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function r(n){if(n.ep)return;n.ep=!0;const o=a(n);fetch(n.href,o)}})();function I(){const e=document.createElement("div"),t=document.createElement("p"),a=document.createElement("img");return t.innerHTML=`
-    I was adrift, lacking direction and purpose, until a developer friend introduced me to the programming world.
-    Descending that spiral, I found myself
-    unraveling code, being amused by reading and understanding existing code, as well bringing my own chaotic creations to life.
-    <br><br>
-    Seeking to deepen my understanding, I enrolled in an online bootcamp at Soul Code Academy, where I immersed myself in the fundamentals of web development over the course
-    of several months. Yet, despite this initial progress, I soon was imprisioned in the "tutorial hell."
-    Fortunately I've discovered The Odin Project. In between an abundance of online courses, I found a path of learning through creation,
-    allowing me to truly grasp the concepts by applying them in real projects.
+    I.
   `,e.id="about-page",a.src="./oldpc.gif",a.alt="Anime old computer gif",e.append(t,a),e}function w(){const e=document.createElement("p");return e.innerHTML=`
     Hey there! I'm a developer based in São Paulo, Brazil. 
     I'm diving into the world of technology, keen to explore its vast oceans and apply its power to create impactful solutions. And have some fun, of course. <br><br>
