@@ -1,15 +1,12 @@
 export default function loadAbout() {
-  const div = document.createElement("div");
   const paragraph = document.createElement("p");
-  const image = document.createElement("img");
   paragraph.innerHTML = `
-    With a late-blooming interest in technology — mainly programming and the internet — I spent some time studying on my own before enrolling in a Computer Science bachelor's program. Now, I’ve decided to pursue it as a career rather than just a hobby, aiming to contribute meaningfully by creatively applying my skills to bring projects and applications to life.
-  `
-    ;
-  div.id = "about-page";
-  image.src = "./oldpc.gif";
-  image.alt = "Anime old computer gif";
-
-  div.append(paragraph, image);
-  return div;
+  With a growing passion for technology—especially programming and the internet—I started as a self-taught learner before enrolling in a Computer Science bachelor's program. What once was a hobby has now become my career path, and I’m eager to apply my skills creatively to build meaningful projects and applications.
+  <br><br>
+  Beyond coding, I enjoy watching football (Vamos, São Paulo!), Formula 1, TV shows, and movies. Outdoors, I like going for walks, reading books in public spaces, or simply being close to nature.
+  <br><br>
+  One of my aspirations as a software developer is to contribute to ecological initiatives, using technology to help preserve and protect the environment.
+  `;
+  return paragraph;
 }
+
