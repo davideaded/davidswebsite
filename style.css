@@ -11,7 +11,7 @@
   --btn: #e6e6bd;
   --btn-border: #000000;
   --btn-txt: #721818;
-  --theme-icon: url(..moon.png);
+  --theme-icon: url(../moon.png);
   --close-icon: black;
 }
 
@@ -391,6 +391,7 @@ footer a:hover {
   .project-links-div {
     flex-direction: row;
     width: 100%;
+    margin: 0;
   }
 
   .project-links-div a {
