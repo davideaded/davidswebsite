@@ -25,7 +25,7 @@
     "description": "A fictitious store based on the Fallout series. My second react project, experimenting with routes and interaction between components.",
     "tools": "React",
     "links": [
-      "https://github.com/davideaded/the-hub-store/",
+      "https://github.com/davideaded/the-hub-store",
       "https://main--sparkly-taffy-e9b7c6.netlify.app/"
     ]
   },
@@ -47,6 +47,16 @@
     "links": [
       "https://github.com/davideaded/snakegame",
       "https://davideaded.github.io/snakegame/"
+    ]
+  },
+  {
+    "name": "MyExpo",
+    "image": "/expo.png",
+    "description": "Virtual gallery using HTML5 Canvas and JavaScript implementing raycast to showcase my projects.",
+    "tools": "HTML5 Canvas and JavaScript",
+    "links": [
+      "https://github.com/davideaded/myexpo",
+      "https://davideaded.github.io/myExpo/"
     ]
   }
 ]
